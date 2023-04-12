@@ -57,7 +57,6 @@ if __name__ == '__main__':
     print("Client is connnecting...")
     cp.connect('192.168.1.26', 12345)
     #modify this IP to your network IP
-    #cp.connect('127.0.0.1', 12345)
     print("Connected to: '192.168.1.26', 12345")
     #collect IQ data
     cp.receiveIQData()
@@ -120,9 +119,6 @@ if __name__ == '__main__':
     print("Client is connnecting...")
     #Edit this IP to your pynq board's IP on network switch. Found through ifconfig
     cp.connect('192.168.1.26', 12345)
-    #cp.connect('192.168.2.99', 12345)
-    #cp.connect('169.254.114.152', 12345)
-    #cp.connect('100.80.243.224', 12345)
     print("Connected to: '192.168.1.26', 12345")
     #collect IQ data
     cp.receiveIQData()
