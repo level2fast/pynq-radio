@@ -52,14 +52,6 @@ class ClientProtocol:
         finally:
             print("Done receiving FM data")
 
-if __name__ == '__main__':
-    cp = ClientProtocol()
-    print("Client is connnecting...")
-    cp.connect('192.168.1.26', 12345)
-    #modify this IP to your network IP
-    print("Connected to: '192.168.1.26', 12345")
-    #collect IQ data
-    cp.receiveIQData()
 import os
 import matlab.engine
 from socket import *
@@ -122,6 +114,7 @@ if __name__ == '__main__':
     print("Connected to: '192.168.1.26', 12345")
     #collect IQ data
     cp.receiveIQData()
+ 
 # Opens matlab and runs Final.m script
 print("Opening MatLab to process data")
 eng = matlab.engine.start_matlab()
