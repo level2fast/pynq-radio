@@ -23,7 +23,7 @@ This is an Embedded application that captures data from the FM Radio band, pefor
 ## **🛠️ Features**  
 ✅ Feature 1 – *Realt Time Data Capture using RTL-SDR*  
 ✅ Feature 2 – *UDP streaming to host PC*  
-✅ Feature 3 – *Audio Playback of data capture*  
+✅ Feature 3 – *FM Demodulation and Audio Playback*  
 
 ---
 
