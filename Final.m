@@ -80,21 +80,3 @@ df = decimate(y_FM_demodulated,10,'fir');
 decimatevalue2=10;
 plot_FFT_IQ(df,1,.05*2.5E6/decimatevalue/decimatevalue2,2.5/decimatevalue/decimatevalue2,0,'Demodulated signal @ Sound Card Freq 31.25MHz');
 sound(df,(2.5E6)/decimatevalue/decimatevalue2);
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%% Debug Code to Try for Future: Advanced Filtering w/ Wavelets %%%%%%%%%%%%%
-%cleandf=wdenoise(df,8) % Wavelets to clean, failed 
-
-%%%%%%%%%%%%% Debug Code to Try for Future: Filtering w/ Cheby2 & Wavelets %%%%%%%%%%%%%
-% %sound(df,(2.5E6)/decimatevalue/decimatevalue2);
-% %sound(cleandf,(2.5*3.3E6)/decimatevalue/decimatevalue2);
-%  order = 7;
-% % %%[n,Ws] = cheb2ord(2000/fs,2020/fs,1,100);              
-% % %%Filter Order
-%  [z,p,k] = cheby2(order,150,0.4,'low');                        
-%  [soslp,glp] = zp2sos(z,p,k);
-%  %%[b,a] = butter(order,1000/(sample_rate/2),'low');
-%  filtered_sound = filtfilt(soslp, glp, df);
-% % %%filtered_sound = filter(b,a,sample_data);
-%  sound(filtered_sound,(2.5E6)/decimatevalue/decimatevalue2);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
